@@ -104,10 +104,23 @@ const Login = () => {
                   )}
                 </Form.Group>
 
-                <Button variant="primary" type="submit" disabled={isSubmitting}>
+                <Button
+                  className="w-100 mt-2"
+                  variant="primary"
+                  type="submit"
+                  disabled={isSubmitting}
+                >
                   Login
                 </Button>
               </Form>
+              <p className="text-center mt-2 text-black">
+                Don't have an account?
+                <a href="/registration" className="link-primary fw-semibold">
+                  {" "}
+                  Sign-Up
+                </a>{" "}
+                here
+              </p>
             </Card.Body>
           </Card>
         </Col>
