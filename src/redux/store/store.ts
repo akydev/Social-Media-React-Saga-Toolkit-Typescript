@@ -3,7 +3,7 @@ import createSagaMiddleware from "redux-saga";
 import registrationReducer from "../slice/registrationSlice";
 import loginReducer from "../slice/loginSlice";
 import userReducer from "../slice/userSlice";
-import profileReducer from "../saga/profileSaga";
+import profileReducer from "../slice/profileSlice";
 import timelineReducer from "../slice/timelineSlice";
 import rootSaga from "../saga/rootSaga";
 const sagaMiddleware = createSagaMiddleware();

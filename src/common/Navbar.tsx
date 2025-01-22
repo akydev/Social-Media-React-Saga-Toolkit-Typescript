@@ -1,9 +1,10 @@
 import { useDispatch } from "react-redux";
-import { AppDispatch } from "../redux/store/";
+import { AppDispatch } from "../redux/store/store";
 import { useEffect } from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome } from "@fortawesome/free-solid-svg-icons";
+import { ProfileRequest } from "../redux/slice/profileSlice";
 
 const Navbars = () => {
   const dispatch = useDispatch<AppDispatch>();
