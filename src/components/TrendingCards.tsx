@@ -9,7 +9,7 @@ const TrendingCards = () => {
       </div>
       <Card.Body>
         <Row>
-          {trendingData.map((value, index) => (
+          {trendingData.map((value) => (
             <Col>
               <Card.Title>#{value.name}</Card.Title>
               <Card.Text>{value.shares}K Shares</Card.Text>

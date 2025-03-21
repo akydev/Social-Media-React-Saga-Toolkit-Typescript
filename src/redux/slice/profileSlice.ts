@@ -13,7 +13,7 @@ const profileSlice = createSlice({
   reducers: {
     ProfileRequest: (
       state: IStateSlice<IUser>,
-      action: PayloadAction<string>
+      _action: PayloadAction<string>
     ) => {
       state.loading = true;
     },

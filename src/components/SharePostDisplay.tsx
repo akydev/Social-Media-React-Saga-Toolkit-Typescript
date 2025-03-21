@@ -22,6 +22,8 @@ import {
   faShareAlt,
   faThumbsUp,
 } from "@fortawesome/free-solid-svg-icons";
+import defaultProfile from "../assets/images/defaultProfile.png";
+
 import DeleteModal from "./DeleteModal";
 
 interface SharePostDisplayProps {
@@ -36,8 +38,6 @@ export const SharePostDisplay = ({ page }: SharePostDisplayProps) => {
   ) as ITimeline[];
   const userId = localStorage.getItem("userId");
   const [liked, setLiked] = useState<string[]>([]);
-  const [show, setShow] = useState<boolean>(false);
-  const [target, setTarget] = useState<HTMLElement | null>(null);
   const [delModal, setDelModal] = useState<boolean>(false);
   const [selectedPostID, setSelectedPostID] = useState<string | null>(null);
   const [activePopoverId, setActivePopoverId] = useState<string | null>(null);
@@ -152,7 +152,7 @@ export const SharePostDisplay = ({ page }: SharePostDisplayProps) => {
                   {page === "profile" && (
                     <div>
                       <Button
-                        ref={(el) => (buttonRefs.current[value._id] = el)}
+                        ref={(el: any) => (buttonRefs.current[value._id] = el)}
                         variant="light"
                         title="More"
                         className="p-2 border-0"

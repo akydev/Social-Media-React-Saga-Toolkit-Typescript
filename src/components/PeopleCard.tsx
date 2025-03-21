@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Button, Card, Col, Row } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { AppDispatch, AppState } from "../redux/store/store";
 import { IUser } from "../redux/type/IUser";
 import { UserRequest } from "../redux/slice/userSlice";
-import defaultProfile from "../assets/defaultProfile.png";
+import defaultProfile from "../assets/images/defaultProfile.png";
 import toast from "react-hot-toast";
 import adminFetch from "../axiosbase/interceptors";
 

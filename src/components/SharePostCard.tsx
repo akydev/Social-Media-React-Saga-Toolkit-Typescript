@@ -10,13 +10,13 @@ import {
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, AppState } from "../redux/store/store";
 import { IUser } from "../redux/type/IUser";
-import defaultProfile from "../assets/defaultProfile.png";
+import defaultProfile from "../assets/images/defaultProfile.png";
 import toast from "react-hot-toast";
 import adminFetch from "../axiosbase/interceptors";
 import { TimelineRequest } from "../redux/slice/timelineSlice";
 
 interface NewPost {
-  usrId: string;
+  userId: string;
   desc: string;
   image?: string;
 }
@@ -46,7 +46,7 @@ export const SharePostCard = () => {
       e.preventDefault();
       if (!data._id) return;
       const newPost: NewPost = {
-        usrId: data._id,
+        userId: data._id,
         desc: desc,
       };
 

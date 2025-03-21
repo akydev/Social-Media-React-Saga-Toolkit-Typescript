@@ -67,7 +67,7 @@ export const EditProfile = () => {
           if (uploadedCoverName) values.coverPicture = uploadedCoverName;
         }
         //Update user details
-        const res = await adminFetch.put(`/use/${userId}`, values);
+        const res = await adminFetch.put(`/user/${userId}`, values);
         if (res.status === 200) toast.success("Profile updated successfully");
       } catch (error) {
         toast.error("Something went wrong");

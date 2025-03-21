@@ -6,6 +6,7 @@ import { Button, Card, Col, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEdit } from "@fortawesome/free-solid-svg-icons";
+import defaultProfile from "../assets/images/defaultProfile.png";
 
 export const ProfileCard = () => {
   const apiUrl = import.meta.env.VITE_BACKEND_URL;
@@ -23,7 +24,7 @@ export const ProfileCard = () => {
         <Card.Body
           className="rounded-4"
           style={{
-            backgroundImage: `url(${apiUrl}/image/${data?.coverPicture})`,
+            backgroundImage: `url(${apiUrl}/images/${data?.coverPicture})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
             height: "200px",
@@ -37,7 +38,7 @@ export const ProfileCard = () => {
             <img
               src={
                 data?.profilePicture
-                  ? `${apiUrl}/image/${data.profilePicture}`
+                  ? `${apiUrl}/images/${data.profilePicture}`
                   : defaultProfile
               }
               alt="Profile"

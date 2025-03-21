@@ -54,7 +54,7 @@ const Login = () => {
           className="left-section d-flex flex-column justify-content-center align-items-center text-center"
         >
           <img
-            src="../src/assets/image/international-day-education-futuristic-style_23-2150998671.jpg"
+            src="../src/assets/images/international-day-education-futuristic-style_23-2150998671.jpg"
             alt="Logo"
             className="logo"
           />
@@ -95,7 +95,7 @@ const Login = () => {
                     value={values.password}
                     onChange={handleChange}
                     onBlur={handleBlur}
-                    placeholder="Create a password"
+                    placeholder="Enter a password"
                   />
                   {touched.password && errors.password && (
                     <Form.Text className="text-danger">

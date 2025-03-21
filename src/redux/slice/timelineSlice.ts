@@ -14,7 +14,7 @@ const timelineSlice = createSlice({
   reducers: {
     TimelineRequest: (
       state: IStateSlice<ITimeline[]>,
-      action: PayloadAction<string>
+      _action: PayloadAction<string>
     ) => {
       state.loading = true;
     },

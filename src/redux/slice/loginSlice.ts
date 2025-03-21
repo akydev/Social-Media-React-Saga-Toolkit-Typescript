@@ -33,7 +33,7 @@ const loginSlice = createSlice({
     },
     loginFailure: (state: LoginState, action: PayloadAction<any>) => {
       state.loading = false;
-      state.responseData = action.payload;
+      state.error = action.payload;
     },
   },
 });
